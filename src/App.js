@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/* import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +22,19 @@ function App() {
   );
 }
 
+export default App; */
+
+
+//Пример использования Day.js:
+import React from 'react';
+import dayjs from 'dayjs';
+function App() {
+    const currentDate = dayjs().format('YYYY MM DD HH:mm:ss');
+    return (
+        <div>
+            <h1>Текущая дата и время:</h1>
+            <p>{currentDate}</p>
+        </div>
+    );
+}
 export default App;
