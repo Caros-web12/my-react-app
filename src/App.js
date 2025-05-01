@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-export default App; */
+export default App;
 
 
 //Пример использования Day.js:
@@ -37,4 +37,38 @@ function App() {
         </div>
     );
 }
+export default App;
+ */
+/* import React from "react";
+const App = (props) => {
+return(
+  <div>
+    <h1>Заголовок - {props.header}</h1>
+    <div>Описание - {props.description}</div>
+  </div>
+)
+};
+
+export default App; */
+
+import React, { useRef } from 'react';
+import Button from './components/Button'; // подключаем компонент Button
+import Input from './components/Input'; // подключаем компонент Input
+import './App.css'; // Подключаем стили
+
+function App() {
+    const inputRef = useRef(null);
+    const handleClear = () => {
+        if (inputRef.current) {
+            inputRef.current.value = '';
+        }
+    };
+    return (
+        <div className="app-container">
+            <Input ref={inputRef} placeholder="Введите текст..." />
+            <Button onClick={handleClear} />
+        </div>
+    );
+}
+
 export default App;
